@@ -3,10 +3,6 @@ import React from "react";
 import addData, { getDocument } from "@/firebase/firestore/data";
 
 export default async function Home() {
-  const [data, setData] = React.useState();
-  React.useEffect(() => {
-    getDocument("users", "user-id").then((user) => setData(user));
-  }, []);
   const handleForm = async () => {
     const data = {
       name: "John snow",
